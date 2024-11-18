@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="BMI_generator.css">
+</head>
+<body>
+    <div class="container">
+        <div class="screen">
+            <div class="hedingSection">
+                <h1>BMI Calculator</h1>
+            </div>
+            <div class="ageSection">
+                <div class="agescreen">
+                <div class="ageLabel">Age</div>
+                <input type="number" id="ageInput">
+            </div>
+            </div>
+            <div class="genderSection">
+                <div class="genderscreen">
+                    <div class="maleContainer">
+                        <div class="checboxmale">
+                            <input type="radio" id="male" name="gender" value="male">
+                        </div>
+                        <div class="maleLabel">Male</div>
+                    </div>
+                    <div class="femaleContainer">
+                        <div class="checboxfemale">
+                            <input type="radio" id="female" name="gender" value="female">
+                        </div>
+                        <div class="maleLabel">Female</div>
+                    </div>
+                </div>
+            </div>
+            <div class="heightWeightSection">
+                <div class="heightWeightscreen">
+                <div class="heightscreen">
+                    <div class="heightLabel">Height (cm)</div>
+                    <input type="number" id="heightInput">
+                </div>
+                <div class="weightscreen">
+                    <div class="weightLabel">Weight (kg)</div>
+                    <input type="number" id="weightInput">
+            </div>
+    </div>
+    </div>
+    <div class="bmiButtonSection">
+            <button id="calculateButton">Calculate BMI</button>
+    </div>
+    <div class="resultSection">
+        <!-- <div class="resultScreen"> -->
+            <!-- <div class="bmiLabel">Your BMI is :</div> -->
+            <!-- <div id="bmiResult">${bmivalue}</div> -->
+            <div class="bmiDescriptionContainer">
+            <!-- <div class="bmiDescription">${bmiStatus}</div> -->
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <script src="BMI_generator.js"></script>
+</body>
+</html>
