@@ -1,0 +1,29 @@
+.card{
+    display: flex;
+    border: 2px solid black;
+    width: 700px;
+    justify-content: left;
+    align-items: center;
+    height: 120px;
+    margin: 10px;
+}
+.image{
+    position: relative;
+}
+.image img{
+    height: 120px;
+}
+.text h1, p{
+    padding: 12px 2px 0px 12px;
+}
+.duration{
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    right: 0;
+    background-color: black;
+    color: white;
+    padding: 2px;
+    font-size: 12px;
+
+}

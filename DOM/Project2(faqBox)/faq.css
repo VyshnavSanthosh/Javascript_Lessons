@@ -1,0 +1,33 @@
+.faqBar{
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    align-items: center;
+
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    width: 20vw;
+    border-radius: 20px;
+    background-color: rgb(217, 184, 39);
+}
+.extendBar{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 20px;
+
+}
+.hide{
+    display: none;
+}
+.textSection, .extendBar p{
+    margin-left: 13px;
+}
+.faqBar button{
+    margin-right: 15px;
+    background-color: rgb(217, 184, 39);
+}
