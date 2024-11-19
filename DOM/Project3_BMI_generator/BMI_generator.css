@@ -187,7 +187,7 @@ body{
         width: 80%;
     }
     .weightLabel, .heightLabel {
-        font-size: 1.2rem;
+        font-size: 1.01rem;
     }
 }
 @media (max-width:450px) {
@@ -195,22 +195,24 @@ body{
         width: 80%;
     }
     .weightLabel, .heightLabel {
-        font-size: 1.02rem;
+        font-size: 0.8rem;
     }
     .hedingSection{
         font-size: 0.8rem;
     }
-
-.maleLabel, .femaleLabel {
-    font-size: 1.2rem;
-}
-}
+    #male, #female{
+        transform: scale(1.5);
+    }
+    .maleLabel, .femaleLabel {
+        font-size: 1.2rem;
+    }
+    }
 @media (max-width:370px) {
     .screen{
         width: 90%;
     }
     .weightLabel, .heightLabel {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
     }
     .maleLabel, .femaleLabel {
         font-size: 1rem;
