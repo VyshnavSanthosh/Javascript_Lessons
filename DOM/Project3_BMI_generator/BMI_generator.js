@@ -4,18 +4,26 @@ let femaleselect = document.querySelector("#female");
 let heightinput = document.querySelector("#heightInput");
 let weightinput = document.querySelector("#weightInput");
 let calculateButton = document.querySelector("#calculateButton");
+let neckinput = document.querySelector("#neckInput");
+let waistinput = document.querySelector("#waistInput");
 let bmiStatusShower = document.querySelector(".bmiDescriptionContainer");
-
+let calculatefatButton = document.querySelector("#calculatefatButton");
 let bmivalue;
 let bmiStatus;
+let agevalue;
+let selectedGender;
+let neckvalue;
+let waistvalue;
+let heightvalue;
+let weightvalue;
+let fatvalue;
 
-calculateButton.addEventListener("click", () => {
+function calculatebmi(){
     console.log('clicked');
-
-    let agevalue = ageinput.value;
-    let heightvalue = heightinput.value;
-    let weightvalue = weightinput.value;
-    let selectedGender = maleselect.checked ? 'Male' : femaleselect.checked ? 'Female' : 'Not selected';
+    agevalue = ageinput.value;
+    heightvalue = heightinput.value;
+    weightvalue = weightinput.value;
+    selectedGender = maleselect.checked ? 'Male' : femaleselect.checked ? 'Female' : 'Not selected';
     console.log(agevalue, heightvalue, weightvalue, selectedGender);
 
     let height = heightvalue / 100; // Convert height to meters
@@ -35,7 +43,32 @@ calculateButton.addEventListener("click", () => {
         </div>`;
 
     document.querySelector(".resultSection").innerHTML = resultshower;
-});
+};
+
+function calculatefat(){
+    console.log('clicked');
+    agevalue = ageinput.value;
+    heightvalue = heightinput.value;
+    weightvalue = weightinput.value;
+    neckvalue = neckinput.value;
+    waistvalue = waistinput.value;
+    selectedGender = maleselect.checked ? 'Male' : femaleselect.checked ? 'Female' : 'Not selected';
+    console.log(agevalue, heightvalue, weightvalue, selectedGender);
+    if (selectedGender === 'Male'){
+        console.log("male");
+        fatvalue = men_body_fat();
+    }
+    else if (selectedGender === 'Female'){
+        console.log("female");
+        fatvalue = women_body_fat();
+    }
+    let bodyfatshower = `        <div class="resultScreenbodyfat">
+            <div class="fatLabel">Your Body Fat Percentage is :</div>
+            <div id="fatResult">${fatvalue}</div>
+        </div>`
+    document.querySelector(".resultSectionbodyFat").innerHTML = bodyfatshower;
+}
+
 
 // Function to check BMI status and set background color
 function checkbmi() {
@@ -52,4 +85,12 @@ function checkbmi() {
         bmiStatus = "Obease";
         bmiStatusColor = "#f44336"; // Red for obesity
     }
+}
+function men_body_fat() {
+    const bodyfatmen  = (495/(1.0324 - 0.19077* Math.log10(waistvalue - neckvalue) + 0.15456 * Math.log10(heightvalue))) - 450;
+    return bodyfatmen.toFixed(2);
+}
+function women_body_fat() {
+    const bodyfatwomen = (495/(1.29579 - 0.35004 * Math.log10(waistvalue - neckvalue) + 0.22100 * Math.log10(heightvalue))) - 450;
+    return bodyfatwomen.toFixed(2);
 }

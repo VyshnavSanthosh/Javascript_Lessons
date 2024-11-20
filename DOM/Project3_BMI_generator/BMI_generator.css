@@ -14,6 +14,51 @@ body{
     background-color: rgb(238, 239, 239);
     border-radius: 15px;
 }
+.navbarContainer{
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    justify-content: space-between;
+    background-color: #ffa332;
+}
+.navleft{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.navright{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.navright button{
+    margin-right: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(52, 51, 51);
+    color: #ffa332;
+}
+.navleftContainer, .navrightContainer{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+.name{
+    font-size: 20px;
+    font-weight: 600;
+}
 .container{
     display: flex;
     align-items: center;
@@ -22,8 +67,9 @@ body{
     height: 100vh;
     width: 100%;
     max-width: 100%; /* Ensure it doesn't exceed the viewport */
-    overflow: hidden;}
-.hedingSection{
+    overflow: hidden;
+}
+.hedingSection, .hedingSectionfat{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,13 +137,13 @@ body{
 #male, #female{
     transform: scale(2);
 }
-.heightWeightSection{
+.heightWeightSection, .neckWaistSection{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
 }
-.heightWeightscreen{
+.heightWeightscreen, .neckWaistscreen{
     width: 85%;
     background-color: white;
     border-radius: 15px;
@@ -107,13 +153,14 @@ body{
     padding: 15px 10px 15px 10px;
     margin-top: 15px;
 }
-.heightscreen, .weightscreen{
+.heightscreen, .weightscreen, .neckscreen, .waistscreen{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 40%;
 }
+
 #heightInput, #weightInput{
     border-radius: 15px;
     height: 1.5rem;
@@ -123,29 +170,42 @@ body{
     text-align: center;
     margin: 5px 0 5px 0;
 }
+#neckInput, #waistInput{
+    border-radius: 15px;
+    height: 1.5rem;
+    width: 90%;
+    border: 1px solid gray;
+    padding: 3px;
+    text-align: center;
+    margin: 5px 0 5px 0;
+    font-size: 0.6rem;
+}
 .weightLabel, .heightLabel{
     font-size: 1.4rem;
 }
-.bmiButtonSection{
+.neckLabel, .waistLabel{
+    font-size: 1.2rem;
+}
+.bmiButtonSection, .fatButtonSection{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
 }
-#calculateButton{
-    background-color: #54c4e6;
+#calculateButton, #calculatefatButton{
+    background-color: #ffa332;
     width: 89%;
     padding: 10px;
     border-radius: 15px;
     margin: 25px;
 }
-.resultSection{
+.resultSection, .resultSectionbodyFat{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
 }
-.resultScreen{
+.resultScreen, .resultScreenbodyfat{
     width: 85%;
     border-radius: 15px;
     display: flex;
@@ -154,16 +214,19 @@ body{
     justify-content: center;
     margin-bottom: 25px;
 }
-.bmiLabel{
+.bmiLabel, .fatLabel{
     font-size: 1.3rem;
 }
-#bmiResult{
+#bmiResult, #fatResult{
     font-size: 1.5rem;
     width: auto;
     padding: 6px 25px 5px 25px;
-    background-color: white;
-    color: skyblue;
+    background-color: #ffa332;
+    color: black;
     border-radius: 25px;
+}
+#fatResult{
+    margin-top: 10px;
 }
 .bmiDescriptionContainer{
     display: flex;
@@ -181,23 +244,39 @@ body{
     border-radius: 20px;
     background-color: #ffa332;
 }
-@media (max-width:550px) {
+
+@media (max-width:560px) {
     .screen{
         width: 80%;
     }
     .weightLabel, .heightLabel {
         font-size: 1.01rem;
     }
+    .waistLabel, .neckLabel{
+        font-size: 0.9rem;
+    }
+    .hedingSectionfat{
+        font-size: 0.8rem;
+    }
+    #waistInput{
+        font-size: 0.5rem;
+    }
+    .fatLabel{
+        font-size: 1.05rem;
+    }
 }
-@media (max-width:450px) {
+@media (max-width:459px) {
     .screen{
         width: 80%;
     }
     .weightLabel, .heightLabel {
         font-size: 0.8rem;
     }
-    .hedingSection{
-        font-size: 0.8rem;
+    .waistLabel, .neckLabel{
+        font-size: 0.7rem;
+    }
+    .hedingSectionfat{
+        font-size: 0.7rem;
     }
     #male, #female{
         transform: scale(1.5);
@@ -205,15 +284,43 @@ body{
     .maleLabel, .femaleLabel {
         font-size: 1.2rem;
     }
+    #waistInput{
+        font-size: 0.42rem;
     }
-@media (max-width:370px) {
+    .navright button{
+        font-size: 0.7rem;
+        padding: 8px 10px;
+    }
+    #bmibtn{
+        font-size: 0.7rem;
+        padding: 8px 17px;
+    }
+}
+@media (max-width:379px) {
     .screen{
         width: 90%;
+    }
+    .hedingSectionfat{
+        font-size: 0.6rem;
     }
     .weightLabel, .heightLabel {
         font-size: 0.7rem;
     }
     .maleLabel, .femaleLabel {
+        font-size: 1rem;
+    }
+    #waistInput{
+        font-size: 0.39rem;
+    }
+    .navright button{
+        font-size: 0.6rem;
+        padding: 8px 8px;
+    }
+    #bmibtn{
+        font-size: 0.7rem;
+        padding: 8px 17px;
+    }
+    .fatLabel{
         font-size: 1rem;
     }
 }

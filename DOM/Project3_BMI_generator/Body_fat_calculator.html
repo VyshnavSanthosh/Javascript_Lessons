@@ -33,8 +33,8 @@
     </div>
     <div class="container">
         <div class="screen">
-            <div class="hedingSection">
-                <h1>BMI Calculator</h1>
+            <div class="hedingSectionfat">
+                <h1>Body-Fat Calculator</h1>
             </div>
             <div class="ageSection">
                 <div class="agescreen">
@@ -70,16 +70,26 @@
             </div>
     </div>
     </div>
-    <div class="bmiButtonSection">
-            <button onclick="calculatebmi()" id="calculateButton">Calculate BMI</button>
-    </div>
-    <div class="resultSection">
-        <!-- <div class="resultScreen"> -->
-            <!-- <div class="bmiLabel">Your BMI is :</div> -->
-            <!-- <div id="bmiResult">${bmivalue}</div> -->
-            <div class="bmiDescriptionContainer">
-            <!-- <div class="bmiDescription">${bmiStatus}</div> -->
+    <div class="neckWaistSection">
+        <div class="neckWaistscreen">
+        <div class="neckscreen">
+            <div class="neckLabel">Neck size(cm)</div>
+            <input type="number" id="neckInput">
         </div>
+        <div class="waistscreen">
+            <div class="waistLabel">Waist size(cm)</div>
+            <input type="number" id="waistInput" placeholder="Waist + Hip for women">
+    </div>
+</div>
+</div>
+    <div class="fatButtonSection">
+            <button onclick="calculatefat()" id="calculatefatButton">Calculate Body fat</button>
+    </div>
+    <div class="resultSectionbodyFat">
+        <!-- <div class="resultScreenbodyfat">
+            <div class="fatLabel">Your Body Fat Percentage is :</div>
+            <div id="fatResult">${fatvalue}</div>
+        </div> -->
         </div>
     </div>
     </div>
