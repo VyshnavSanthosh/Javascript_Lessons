@@ -178,7 +178,7 @@ body{
     padding: 3px;
     text-align: center;
     margin: 5px 0 5px 0;
-    font-size: 0.6rem;
+    font-size: 0.9rem;
 }
 .weightLabel, .heightLabel{
     font-size: 1.4rem;
@@ -258,9 +258,7 @@ body{
     .hedingSectionfat{
         font-size: 0.8rem;
     }
-    #waistInput{
-        font-size: 0.5rem;
-    }
+
     .fatLabel{
         font-size: 1.05rem;
     }
@@ -284,9 +282,6 @@ body{
     .maleLabel, .femaleLabel {
         font-size: 1.2rem;
     }
-    #waistInput{
-        font-size: 0.42rem;
-    }
     .navright button{
         font-size: 0.7rem;
         padding: 8px 10px;
@@ -309,9 +304,7 @@ body{
     .maleLabel, .femaleLabel {
         font-size: 1rem;
     }
-    #waistInput{
-        font-size: 0.39rem;
-    }
+
     .navright button{
         font-size: 0.6rem;
         padding: 8px 8px;

@@ -94,3 +94,26 @@ function women_body_fat() {
     const bodyfatwomen = (495/(1.29579 - 0.35004 * Math.log10(waistvalue - neckvalue) + 0.22100 * Math.log10(heightvalue))) - 450;
     return bodyfatwomen.toFixed(2);
 }
+
+function updateWaistInput() {
+    selectedGender = maleselect.checked ? "Male" : femaleselect.checked ? "Female" : "Not selected";
+
+    let waistsectionviewer;
+    if (selectedGender === "Female") {
+        waistsectionviewer = `
+            <div class="waistLabel">Waist+Hip(cm)</div>
+            <input type="number" id="waistInput">`;
+    } else {
+        waistsectionviewer = `
+            <div class="waistLabel">Waist size(cm)</div>
+            <input type="number" id="waistInput">`;
+    }
+    document.querySelector(".waistscreen").innerHTML = waistsectionviewer;
+    waistinput = document.querySelector("#waistInput"); // Update reference to the new input
+}
+
+// Add event listeners to the gender radio buttons
+maleselect.addEventListener("change", updateWaistInput);
+femaleselect.addEventListener("change", updateWaistInput);
+
+// Initial call to set the waist input based on default selection
