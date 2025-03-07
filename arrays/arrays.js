@@ -1,72 +1,74 @@
-let arr = [1,2,3,4,5,6,7,8,9,10];
+// Define an array of numbers
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// forEach loop
+// forEach Loop
+// Iterate over each element in the array and log its value, index, and the array itself
+arr.forEach((value, index, arr) => {
+    console.log(value, index, arr);
+});
 
-arr.forEach((value,index,arr) => {
-    console.log(value,index,arr);
-})
-
-// for of loop
-
+// for...of Loop
+// Iterate over each element in the array and log the element plus 2
 for (const element of arr) {
-
     console.log(element + 2);
 }
 
-// pop
-
+// pop Method
+// Remove the last element from the array
 arr.pop();
-console.log(arr);
+console.log(arr); // Log the updated array
 
-// push
-
+// push Method
+// Add a new element (11) to the end of the array
 arr.push(11);
-console.log(arr);
+console.log(arr); // Log the updated array
 
-// shift
-
+// shift Method
+// Remove the first element from the array
 arr.shift();
-console.log(arr);
+console.log(arr); // Log the updated array
 
-// unshift
-
+// unshift Method
+// Add a new element (0) to the beginning of the array
 arr.unshift(0);
-console.log(arr);
+console.log(arr); // Log the updated array
 
-// splice
-
+// splice Method
+// Remove the first three elements from the array
 arr.splice(0, 3);
-console.log(arr);
+console.log(arr); // Log the updated array
 
-// reverse
-
+// reverse Method
+// Reverse the order of elements in the array
 arr.reverse();
-console.log(arr);
+console.log(arr); // Log the reversed array
 
-// map
-
-let newarr = arr.map((value,arr,index) => {
+// map Method
+// Create a new array with each element doubled
+let newarr = arr.map((value, arr, index) => {
     return value * 2;
-})
-console.log(newarr);
+});
+console.log(newarr); // Log the new array
 
-// filter
-
-const greaterThan12 = (e) =>{             // here e is value
-    if(e > 12) return true;
+// filter Method
+// Define a function to check if a value is greater than 12
+const greaterThan12 = (e) => {
+    if (e > 12) return true;
     else return false;
-}
-console.log(newarr.filter(greaterThan12))   
+};
 
-// reduce
+// Filter the new array to include only values greater than 12
+console.log(newarr.filter(greaterThan12));
 
-const add = (a,b) =>{ 
-             // here a and b are two adjacent values of the array      
+// reduce Method
+// Define a function to add two adjacent values
+const add = (a, b) => {
     return a + b;
-}
-console.log(newarr.reduce(add))
+};
 
-// Array From
+// Reduce the new array to a single sum
+console.log(newarr.reduce(add));
 
-console.log(Array.from("hello world"))
-// converts anything to an array
+// Array.from Method
+// Convert a string into an array of characters
+console.log(Array.from("hello world"));

@@ -5,21 +5,25 @@
     box-sizing: border-box;
 }
 body{
-    background-color: rgb(55, 55, 55);
+    /* background-color: rgb(55, 55, 55); */
+    background-color: #F4F3FF;
     overflow-x: hidden;
     
 }
 .screen{
     width: 28rem;
-    background-color: rgb(238, 239, 239);
+    background-color:#F4F3FF;
     border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    color: #6C63FF;
 }
 .navbarContainer{
     display: flex;
     align-items: center;
     height: 4rem;
     justify-content: space-between;
-    background-color: #ffa332;
+    /* background-color: #ffa332; */
+    background-color: #6C63FF;
 }
 .navleft{
     width: 90%;
@@ -40,8 +44,10 @@ body{
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
-    background-color: rgb(52, 51, 51);
-    color: #ffa332;
+    /* background-color: rgb(52, 51, 51); */
+    /* color: #ffa332; */
+    color: black;
+    background-color: #F4F3FF;
 }
 .navleftContainer, .navrightContainer{
     height: 100%;
@@ -58,6 +64,7 @@ body{
 .name{
     font-size: 20px;
     font-weight: 600;
+    color: #F4F3FF;
 }
 .container{
     display: flex;
@@ -97,6 +104,7 @@ body{
 .ageLabel{
     font-size: 1.5rem;
     margin: 1px;
+    font-weight: 600;
     margin-bottom: 5px;
 }
 #ageInput{
@@ -112,27 +120,37 @@ body{
     align-items: center;
     justify-content: center;
     width: 100%;
+    flex-direction: column;
+    gap: 10px;
 }
 .genderscreen{
     width: 85%;
-    background-color: white;
-    border-radius: 15px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    padding: 15px 10px 15px 10px;;
+    justify-content: space-between;
+    padding: 0;
     margin-top: 15px;
 }
 .maleContainer, .femaleContainer{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 15px 25px;
+    background-color: white;
+    border-radius: 15px;
+    width: 48%;
+    transition: all 0.2s ease;
+}
+.maleContainer:hover, .femaleContainer:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .checboxmale, .checboxfemale{
     margin-right: 15px;   
 }
 .maleLabel, .femaleLabel{
     font-size: 1.4rem;
+    font-weight: 600;
 }
 #male, #female{
     transform: scale(2);
@@ -181,10 +199,12 @@ body{
     font-size: 0.9rem;
 }
 .weightLabel, .heightLabel{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 .neckLabel, .waistLabel{
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 550;
 }
 .bmiButtonSection, .fatButtonSection{
     display: flex;
@@ -193,8 +213,11 @@ body{
     width: 100%;
 }
 #calculateButton, #calculatefatButton{
-    background-color: #ffa332;
+    /* background-color: #ffa332; */
+    background-color: #6C63FF;
     width: 89%;
+    color: #F4F3FF;
+    font-weight: 600;
     padding: 10px;
     border-radius: 15px;
     margin: 25px;
@@ -221,7 +244,8 @@ body{
     font-size: 1.5rem;
     width: auto;
     padding: 6px 25px 5px 25px;
-    background-color: #ffa332;
+    /* background-color: #ffa332; */
+    background-color: #6C63FF;
     color: black;
     border-radius: 25px;
 }

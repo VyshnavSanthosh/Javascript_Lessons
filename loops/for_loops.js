@@ -1,36 +1,52 @@
-// Simple for loop
+// Define a string to be printed repeatedly
+let print = "hello world";
 
-let print = "hello world"
-for(i = 0; i < 100; i++){
-    console.log(print)
+// Use a simple for loop to print the string 100 times
+for (i = 0; i < 100; i++) {
+    // Log the string to the console in each iteration
+    console.log(print);
 }
 
-// for of loop
 
-let fruits = ["apple", "banana", "orange"]
-for(fruit of fruits){
-    console.log(fruit)
+// Define an array of fruits
+let fruits = ["apple", "banana", "orange"];
+
+// Use a for...of loop to iterate over each fruit in the array
+for (fruit of fruits) {
+    // Log each fruit to the console
+    console.log(fruit);
 }
 
-// for in loop
 
-let person = {name: "John", age: 30}
-for(let i in person){
-    console.log(`${i} : ${person[i]}`)
+// Define an object representing a person
+let person = { name: "John", age: 30 };
+
+// Use a for...in loop to iterate over each property in the object
+for (let i in person) {
+    // Log each property name and its value to the console
+    console.log(`${i} : ${person[i]}`);
 }
 
-let person2 = {name: "John", age:90}
+// Define another person object
+let person2 = { name: "John", age: 90 };
+
+// Use a for...in loop with a check to ensure we only iterate over the object's own properties
 for (const key in person2) {
+    // Check if the property belongs to the object itself (not inherited)
     if (Object.prototype.hasOwnProperty.call(person2, key)) {
+        // Get the value of the current property
         const element = person2[key];
-        console.log(`${key} : ${element}`)
+        // Log each property name and its value to the console
+        console.log(`${key} : ${element}`);
     }
 }
 
-// forEach loop
 
+// Define an array of numbers
+let numbers = [1, 2, 3, 4, 5];
 
-let numbers = [1, 2, 3, 4, 5]
-numbers.forEach(function(number){
-    console.log(number)
-})
+// Use the forEach method to iterate over each number in the array
+numbers.forEach(function (number) {
+    // Log each number to the console
+    console.log(number);
+});

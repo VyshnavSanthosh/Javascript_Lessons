@@ -39,7 +39,7 @@ function calculatebmi(){
         <div class="resultScreen">
             <div class="bmiLabel">Your BMI is :</div>
             <div id="bmiResult">${bmivalue}</div>
-            <div class="bmiDescription" style="background-color: ${bmiStatusColor};">${bmiStatus}</div>
+            <div class="bmiDescription" style="background-color: ${bmiStatusColor}; color: black;">${bmiStatus}</div>
         </div>`;
 
     document.querySelector(".resultSection").innerHTML = resultshower;
