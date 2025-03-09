@@ -16,4 +16,3 @@ button.addEventListener("click",() =>{
 button.addEventListener("keydown",(e) =>{
     console.log(e.key , e.keyCode);   // prints which key was pressed and its value
 })
-clo
