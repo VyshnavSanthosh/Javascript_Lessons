@@ -31,3 +31,40 @@ getdata(100).then(()=>{
 })
 
 
+
+
+const p1 = new Promise(function(resolve, reject){
+    setTimeout(function(){
+        reject("p1 sucess")},2000)
+})
+
+const p2 = new Promise(function(resolve, reject){
+    setTimeout(function(){
+        resolve("p2 sucess")},6000)
+})
+
+const p3 = new Promise(function(resolve, reject){
+    setTimeout(function(){
+        resolve("p3 sucess")},4000)
+})
+
+// Promise API's
+
+Promise.all([p1,p2,p3]).then(function (result){
+    console.log(result);
+})
+
+Promise.allSettled([p1,p2,p3]).then(function (result){
+    console.log(result);
+})
+
+Promise.race([p1,p2,p3]).then(function (result){
+    console.log(result);
+})
+
+Promise.any([p1,p2,p3]).then(function (result){
+    console.log(result);
+})
+.catch(function(error){
+    console.error(error);
+})

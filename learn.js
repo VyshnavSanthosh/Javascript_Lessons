@@ -1,10 +1,25 @@
+// setTimeout(() => {
+//     console.log('timer');
+// }, 8000);
+
+// function x(y){
+//     console.log('x');
+//     y();
+    
+// }
+// x(function y() {
+//     console.log('y');
+// })
+
 
 function a(){
-    var b=10;
-    c();
-    function c(){
-        console.log(b);
+    for (var i = 0; i <= 3; i++) {
+        setTimeout(() => {
+            console.log(i);
+        }, i * 1000);
         
     }
+    
 }
 a();
+
