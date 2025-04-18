@@ -1,3 +1,9 @@
+// for loop syntax
+
+// for( start ; end ; change ){
+
+// }
+
 // Define a string to be printed repeatedly
 let print = "hello world";
 
@@ -50,3 +56,52 @@ numbers.forEach(function (number) {
     // Log each number to the console
     console.log(number);
 });
+
+
+//  divisors of a nubmer
+
+let numb = Number(prompt("Enter a number"));
+if (Number.isNaN(numb)){
+    console.log('Enter a valid number');
+}
+else if(numb <= 0){
+    console.log('Enter a positive number');
+}
+else{
+    for (let i = 1; i <= numb/2; i++) {
+        if ((numb % i) === 0) console.log(i);
+    }
+    console.log(numb);
+    
+}
+// if you take a number  for exampel 12 it can only divided by upto its half for example 12/2 = 6 , 7,8,9,10 or 11 cannot divisible by 12
+
+
+
+// Prime number
+
+let num = Number(prompt("Enter a number"));
+let isPrime = true;
+if (Number.isNaN(num)){
+    console.log('Enter a valid number');
+}
+else if(num <= 0){
+    console.log('Enter a positive number');
+}
+else if(num == 1){
+    console.log(`${num} is `,isPrime);
+}
+else{
+    for (let i = 2; i <= num/2; i++) {
+        if ((num % i) == 0){
+            isPrime = false;
+            break;
+        }
+
+    }
+    console.log(`${num} is `,isPrime);
+    
+}
+
+
+
