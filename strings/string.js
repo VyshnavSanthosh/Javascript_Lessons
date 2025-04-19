@@ -67,3 +67,23 @@ for (let i = name.length - 1; i >= 0; i++){
     rev += name.charAt(i);
 }
 console.log(rev);
+
+
+// toggle small case and capital case
+
+function toggleCase(str) {
+    let result = '';
+    for (let char of str) {
+        if (char === char.toUpperCase()) {
+            result += char.toLowerCase();
+        } else {
+            result += char.toUpperCase();
+        }
+    }
+    return result;
+}
+
+// Example usage
+let input = "HeLLo WoRLd!";
+let toggled = toggleCase(input);
+console.log(toggled); // hEllO wOrlD!
