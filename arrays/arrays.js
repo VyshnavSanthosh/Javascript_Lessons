@@ -443,6 +443,18 @@
 // // _____________________________________________________________________________________________________
 
 
+// //                                 or use set data structure
+
+// let a = [1,1,2,3,2,4,3];
+// let b = new Set();
+// for (let i = 0; i < a.length; i++){
+//     b.add(i);
+// }
+// console.log(b);
+// // _____________________________________________________________________________________________________
+
+
+
 // //                       Merge two sorted array
 
 // let a = [2,4,6]
@@ -473,10 +485,43 @@
 //     j++
 // }
 // console.log(c);
+
+
+// //                       or using set data structure for not duplicate
+
+// let a = [1,4,6,8,9];
+// let b = [2,3,4,6,7,8];
+// let k = new Set();
+// let i = 0;
+// let j = 0;
+// while( i < a.length && j < b.length ){
+//     if (a[i] < b[j]) {
+//         k.add(a[i])
+//         i++;
+//     } else if (b[j] < a[i]) {
+//         k.add(b[j]);
+//         j++;
+//     }
+//     else{
+//         k.add(a[i])
+//         i++;
+//         j++;
+//     }
+// }
+// while ( i < a.length )  {
+//     k.add(a[i])
+//     i++;
+// }
+// while ( j < b.length ) {
+//     k.add(b[j]);
+//     j++;
+// }
+// console.log(k);
+
 // //_____________________________________________________________________________________________________
 
 
-//  //                       Best time to buy stock and sell it
+//  //                              Best time to buy stock and sell it
 
 // let a = [7,6,4,3,1];
 // let maxprofit = 0;
@@ -493,6 +538,7 @@
 // }
 // console.log(`best day to buy stock is day ${a.indexOf(min)+1} and sell it is day ${a.indexOf(maxprofit + min)+1} which will give you a profit of Rs.${maxprofit}`);
 // //_____________________________________________________________________________________________________
+
 
 // //                               Sort 0,1,2 in the order
 
@@ -540,22 +586,95 @@
 // }
 // // _____________________________________________________________________________________________________
 
-// //                      Find the second smallest element in an array
+// //                                     Find the second smallest element in an array
 
-let a = [1,4,1,7,5,8];
-let min = Infinity;
-let secondSmallest = Infinity
-for (let i=0; i<a.length; i++){
-    if (a[i] < min ){
-        min = a[i];
-    }
-}
-console.log(min);
+// let a = [1,4,1,7,5,8];
+// let min = a[0];
+// let secondSmallest = 0;
+// for (let i=1; i<a.length; i++){
+//     if (a[i] > min ){
+//         secondSmallest = min
+//         min = a[i];
+//     }
+//     else if ( a[i] > secondSmallest && a[i] != min) secondSmallest = a[i];
+// }
+// console.log(secondSmallest);
+// console.log(min);
+
+
+// let a1 = [1,2,5,4,3,2];
+// let s = new Set();
+// let big;
+// let a2 = [1,3,6,8,0,2,5,4];
+// if (a1.length < a2.length)  big = a2;
+// else big = a1;
+// for (let i = 0; i< big.length; i++){
+//     if (i < a1.length) s.add(a1[i]);
+//     if (i < a2.length) s.add(a2[i]);
+// }
+// console.log(s);
+// // _____________________________________________________________________________________________________
+
+
+// //                                      Intersection (Commone) of two arrays
+
+// let a = [1,4,6,8,9];
+// let b = [2,3,4,6,7,8];
+// let k = new Set();
+// let i = 0;
+// let j = 0;
+// while( i < a.length && j < b.length ){
+//     if (a[i] == b[j]) {
+//         k.add(a[i])
+//         j++;
+//         i++;
+//     }
+//     else if (a[i]  < b[j]) i++;
+//     else  j++;
+// }
+// console.log(k);
+// // _____________________________________________________________________________________________________
+
+
+// //                                   Find the missing element 
+
+// let a = [1,2,4,5]
+// let n =  a.length + 1;
+// // we need to find the sum of numbers upto n and then subtract it from the sum of all elements in an array
+// let sum = (n*(n+1))/2;
+// let sumarray = 0;
+// for (let i = 0; i < a.length; i++) {
+//     sumarray += a[i]     
+// }
+// let missingElement =  sum - sumarray
+// console.log(missingElement);
+
+
+// //                               Find the max consecutive elements in an array
+
+// let a  = [1,1,0,1,1,1,2,1,1,2,2,2,2,2];
+// let maxcosecutive = 0;
+// let consecutive = 0;
+// for(let i = 0; i < a.length; i++ ){
+//     if(a[i] == a[i+1]) consecutive++;
+//     else consecutive = 0
+//     if(consecutive > maxcosecutive) maxcosecutive = consecutive
+// }
+// console.log(maxcosecutive +1);
+
+
+let a = [1, 2, 0, 3, 0, 6, 7];
+let j = 0; // points to where next non-zero should go
+
 for (let i = 0; i < a.length; i++) {
-    if (a[i] < secondSmallest && a[i] != min){
-        secondSmallest = a[i];
+    if (a[i] != 0) {
+        // swap a[i] with a[j] if needed
+
+        let temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;        
+        j++;
     }
-    
-    
 }
-console.log(secondSmallest);
+console.log(a);  // Output: [1, 2, 3, 6, 7, 0, 0]
+
